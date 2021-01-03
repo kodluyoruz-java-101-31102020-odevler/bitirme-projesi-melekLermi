@@ -1,0 +1,164 @@
+"""""""TO DO LATER""""""
+
+
+use bookdb;
+
+create table authorsofbookk(
+	authorId int not null,
+    bookId int not null,
+    authorName varchar(30) not null,
+    authorSurname varchar(30) not null,
+	primary key(bookId)
+);
+
+create table readbooks(
+	bookId int not null,
+    bookName varchar(45) not null,
+    yearofPrinting Date not null,
+    bookNote varchar(200) not null,
+    authors varchar(40) not null,
+	primary key(bookId),
+    foreign key(bookId) references authorsofbookk(bookId) on delete cascade
+);
+
+
+
+
+
+
+-----
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Frontend Tasarým</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="container">
+	<h2 class="text-dark bg-light m-5 p-4">Kitap Arama</h2>
+	  <form action="" method="post">
+	  <div class="form-group">
+		<label>Kitap Baþlýk</label>
+		<input type="text" name="kitapara" class="form-control"> &nbsp; &nbsp;<input type="submit" value="Arama Yap" class="btn btn-success form-control">
+	  </div>
+	  <div class="m-5"></div>
+	  </form>
+    </div>
+	
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+-------
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Frontend Tasarým</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="container">
+	<h2 class="text-dark bg-light m-5 p-4">Aranan Bulunan Kitaplarýn Listesi</h2>
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xl-12">
+				<table class="table table-striped">
+					<thead>
+						<th>Kitap Baþlýk</th>
+						<th>Yazar / Yazarlar</th>
+					</thead>
+					<tbody>
+						<td>Kitap Baþlýk 1</td>
+						<td>Kitap Yazar 1</td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	  <div class="m-5"></div>
+    </div>
+	
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+-------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Frontend Tasarým</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="container">
+	<h2 class="text-dark bg-light m-5 p-4">Kitap Kayýt</h2>
+	  <form action="" method="post">
+	  <div class="form-group">
+		<label>Kitap Baþlýk</label>
+		<input type="text" name="kitapbaslik" class="form-control">
+	  </div>
+	  <div class="form-group">
+		<label>Basým Yýlý</label>
+		<input type="text" name="kitapbasimyili" class="form-control">
+	  </div>
+	  <div class="form-group">
+		<label>Kitap Açýklamasý</label>
+		<textarea rows="5" col="10" class="form-control" name="kitapaciklama"></textarea>
+	  </div>
+	  <div class="form-group">
+		<label>Not</label>
+		<textarea rows="5" col="10" class="form-control" name="kitapnot"></textarea>
+	  </div>
+	  <div class="form-group">
+		<label>Yazarlar</label>
+		<select name="yazarlar" class="form-control">
+			<option value="">Yazar Seçiniz...</option>
+			<option>Yazar Adý Soyadý 1</option>
+			<option>Yazar Adý Soyadý 2</option>
+			<option>Yazar Adý Soyadý 3</option>
+			<option>Yazar Adý Soyadý 4</option>
+			<option>Yazar Adý Soyadý 5</option>
+			<option>Yazar Adý Soyadý 6</option>
+		</select>
+	  </div>
+	  <div class="form-group mt-5">
+		<input type="submit" value="Ekle" class="btn btn-success form-control">
+	  </div>
+	  </form>
+	  <div class="m-5"></div>
+    </div>
+	
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+-------
+
+
+
+
+
